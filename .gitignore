@@ -1,0 +1,8 @@
+.direnv/
+.parcel-cache/
+node_modules/
+dist/
+.yarn/
+.venv
+__pycache__/
+data.json

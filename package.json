@@ -1,0 +1,32 @@
+{
+  "name": "rom-scraper",
+  "scripts": {
+    "start": "parcel",
+    "clean": "rm -rf dist/ .parcel-cache",
+    "build": "parcel build",
+    "deploy": "python upload.py"
+  },
+  "devDependencies": {
+    "buffer": "^5.5.0||^6.0.0",
+    "parcel": "2.16.4",
+    "prettier": "^3.8.3",
+    "prettier-plugin-tailwindcss": "^0.7.2"
+  },
+  "source": [
+    "src/index.html",
+    "src/not_found.html"
+  ],
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/mithril": "^2.2.8",
+    "datatables.net": "^2.3.8",
+    "datatables.net-dt": "^2.3.8",
+    "datatables.net-responsive-dt": "^3.0.8",
+    "gridjs": "^6.2.0",
+    "gsmarena-api": "^2.0.5",
+    "gsmarena-scraper": "^1.0.3",
+    "mithril": "^2.3.8",
+    "tailwindcss": "^4.2.2"
+  }
+}
