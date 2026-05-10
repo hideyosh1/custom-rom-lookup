@@ -1,0 +1,26 @@
+name: Scrape and build
+
+# only run on changes to master
+on:
+  push:
+    branches:
+      - main
+
+concurrency: # prevent concurrent deploys doing strange things
+  group: scrape
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: yarn install
+      # When the dist_dir is ready, deploy it to neocities
+      - name: Build
+        run: yarn build
+      - name: Deploy
+        run: python upload.py
+        env:
+          NEKOWEB_API_TOKEN: ${{ secrets.NEKOWEB_API_TOKEN }}
