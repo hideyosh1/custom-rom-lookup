@@ -15,10 +15,10 @@ headers = {"Authorization": os.environ["NEKOWEB_API_TOKEN"]}
 extant = requests.request(
     "GET", ls_url, headers=headers, params={"pathname": "./pepsi.nekoweb.org/scraper/"}
 )
-# serverfiles = json.loads(extant.text)
+serverfiles = json.loads(extant.text)
 serverset = set()
-# for key in serverfiles:
-#     serverset.add(key["name"])
+for key in serverfiles:
+    serverset.add(key["name"])
 # print(serverfiles)
 # print(serverset)
 # Assign directory
