@@ -77,7 +77,7 @@ for file in serverset:
         response = requests.request(
             "POST",
             delete_url,
-            data={"pathname": f"/pepsi.nekoweb.org/{file}"},
+            data={"pathname": f"/pepsi.nekoweb.org/scraper/{file}"},
             headers=headers,
         )
         print(response.text)

@@ -18,11 +18,11 @@ lineage.scrape(r.text, phonedict)
 
 r = requests.get("https://iode.tech/iodeos-official-supported-devices/")
 iode.scrape(r.text, phonedict)
-
-r = requests.get(
-    "https://api.github.com/repos/ProjectInfinity-X/official_devices/contents/devices?ref=master"
-)
-infinity_x.scrape(r.text, phonedict)
+#
+# r = requests.get(
+#     "https://api.github.com/repos/ProjectInfinity-X/official_devices/contents/devices?ref=master"
+# )
+# infinity_x.scrape(r.text, phonedict)
 
 r = requests.get("https://projectelixiros.com/assets/json/download.json")
 elixir.scrape(r.text, phonedict)
