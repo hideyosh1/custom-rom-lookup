@@ -18,11 +18,13 @@ jobs:
       - name: Install dependencies
         run: yarn install
       # When the dist_dir is ready, deploy it to neocities
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip setuptools wheel requests beautifulsoup4 jsonpickle
       - name: Scrape
         run: python scrapers/scrape.py > data.json
       - name: Build
         run: yarn build
-        env:
-          NEKOWEB_API_TOKEN: ${{ secrets.NEKOWEB_API_TOKEN }}
       - name: Deploy
         run: python upload.py
+        env:
+          NEKOWEB_API_TOKEN: ${{ secrets.NEKOWEB_API_TOKEN }}
