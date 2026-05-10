@@ -30,6 +30,7 @@ new Grid({
     limit: 20,
     summary: false,
   },
+  search: true,
   style: {
     table: {},
   },
