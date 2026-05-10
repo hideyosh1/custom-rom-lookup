@@ -13,19 +13,17 @@ headers = {"Authorization": os.environ["NEKOWEB_API_TOKEN"]}
 # , "application/octet-stream")} data = {"pathname": "/test"}
 
 extant = requests.request(
-    "GET", ls_url, headers=headers, params={"pathname": "./pepsi.nekoweb.org/"}
+    "GET", ls_url, headers=headers, params={"pathname": "./pepsi.nekoweb.org/scraper/"}
 )
-serverfiles = json.loads(extant.text)
+# serverfiles = json.loads(extant.text)
 serverset = set()
-for key in serverfiles:
-    serverset.add(key["name"])
+# for key in serverfiles:
+#     serverset.add(key["name"])
 # print(serverfiles)
 # print(serverset)
 # Assign directory
 
 directory = "./dist/"
-shutil.copy2("src/robots.txt", directory)
-# shutil.copy2("src/elements.css", directory)
 
 
 names = set()
@@ -48,7 +46,7 @@ for path in upfolds:
         "POST",
         url,
         headers=headers,
-        data={"pathname": "/pepsi.nekoweb.org/" + path.replace("./dist/", "")},
+        data={"pathname": "/pepsi.nekoweb.org/scraper/" + path.replace("./dist/", "")},
         files=upfolds[path],
     )
     print(response.text)
@@ -57,10 +55,10 @@ for path in upfolds:
 # print(f.read())
 intersect = names & serverset
 
-exempt_str = ["asset*", "wlog"]
+exempt_str = ["asset.*", "wlog"]
 exempt_patterns = []
 for pattern in exempt_str:
-    exempt_patterns += [re.compile(pattern)]
+    exempt_patterns.extend([re.compile(pattern)])
 
 
 print(serverset)
@@ -69,7 +67,7 @@ for file in serverset:
     if file not in intersect:
         exempt = False
         for pattern in exempt_patterns:
-            if pattern.match(pattern, file) is not None:
+            if pattern.match(file):
                 exempt = True
         if exempt:
             continue
