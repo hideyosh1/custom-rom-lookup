@@ -2,12 +2,11 @@ name: Daily Tasks
 
 on:
   schedule:
-    # Run at 6 AM UTC every day
     - cron: "0 6 * * *"
   workflow_dispatch:
 
 permissions:
-  contents: write # Crucial: Gives the action permission to push changes
+  contents: write
 
 jobs:
   daily-security-scan:
@@ -18,7 +17,7 @@ jobs:
 
       - name: Run security scan
         run: |
-          npm audit --audit-level=high
+          yarn npm audit -A
           echo "Security scan completed at $(date)"
   scrape:
     runs-on: ubuntu-latest
