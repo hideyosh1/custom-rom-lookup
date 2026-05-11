@@ -3,7 +3,7 @@
   "scripts": {
     "start": "parcel",
     "clean": "rm -rf dist/ .parcel-cache",
-    "build": "parcel build",
+    "build": "parcel build --public-url ./",
     "deploy": "python upload.py"
   },
   "devDependencies": {
