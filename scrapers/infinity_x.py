@@ -1,5 +1,6 @@
 import Phone
 import requests
+import subprocess
 import json
 
 
@@ -9,7 +10,8 @@ def scrape(text, phonedict):
         codename = phone["name"].split(".")[0]
         support = ["infinity-x"]
 
-        r = requests.get(phone["download_url"], allow_redirects=True)
+        # r = subprocess.check_output(['ls', '-l'])
+        # requests.get(phone["download_url"], allow_redirects=True)
 
         try:
             info = json.loads(r.text)

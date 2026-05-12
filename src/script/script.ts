@@ -1,37 +1,17 @@
 import phones from "../../data.json";
-import { Grid } from "gridjs";
-import "gridjs/dist/theme/mermaid.css";
+import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-// console.log(phones);
-//
-//
-let data: any = [];
 for (const [key, value] of Object.entries(phones)) {
   let element = document.createElement("tr");
   element.id = key;
 
-  let phone = [
-    value.name,
-    value.vendor,
-    value.codename,
-    value.support.join(", ").trim().replace(/,/g, "\n"),
-  ];
+  element.innerHTML = `
+  <th>${value.name}</th>
+  <td>${value.vendor}</td>
+  <td>${key}</td>
+  <td>${value.support}</td>
+  `;
 
-  data.push(phone);
-
-  console.log(key);
+  document.querySelector("tbody")?.appendChild(element);
 }
-
-new Grid({
-  columns: ["name", "vendor", "codename", "support"],
-  data: data,
-  sort: true,
-  pagination: {
-    limit: 20,
-    summary: false,
-  },
-  search: true,
-  style: {
-    table: {},
-  },
-}).render(document.querySelector("#phonetable")!);

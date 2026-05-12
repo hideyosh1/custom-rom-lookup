@@ -1521,13 +1521,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mithril@npm:^2.2.8":
-  version: 2.2.8
-  resolution: "@types/mithril@npm:2.2.8"
-  checksum: 10c0/983da266637eeee0b079551433905f9f493696c08edec6ee5b1e4243bf2c9e64b948323df6959321135eec893d590168c491ce50c4ec723e624e883d82cfe4c8
-  languageName: node
-  linkType: hard
-
 "abbrev@npm:^3.0.0":
   version: 3.0.1
   resolution: "abbrev@npm:3.0.1"
@@ -1631,6 +1624,15 @@ __metadata:
   version: 1.0.0
   resolution: "boolbase@npm:1.0.0"
   checksum: 10c0/e4b53deb4f2b85c52be0e21a273f2045c7b6a6ea002b0e139c744cb6f95e9ec044439a52883b0d74dedd1ff3da55ed140cfdddfed7fb0cccbed373de5dce1bcf
+  languageName: node
+  linkType: hard
+
+"bootstrap@npm:^5.3.8":
+  version: 5.3.8
+  resolution: "bootstrap@npm:5.3.8"
+  peerDependencies:
+    "@popperjs/core": ^2.11.8
+  checksum: 10c0/0039a9df2c3e7bfa04f1abca199c299ff3b75869d578c0cb1721c6f1f203c91531788a5631ecbee01513481979314d0e4ba0d90c2011e6ce18fc2e0bc93e18d9
   languageName: node
   linkType: hard
 
@@ -1837,46 +1839,6 @@ __metadata:
   version: 6.2.2
   resolution: "css-what@npm:6.2.2"
   checksum: 10c0/91e24c26fb977b4ccef30d7007d2668c1c10ac0154cc3f42f7304410e9594fb772aea4f30c832d2993b132ca8d99338050866476210316345ec2e7d47b248a56
-  languageName: node
-  linkType: hard
-
-"datatables.net-dt@npm:^2, datatables.net-dt@npm:^2.3.8":
-  version: 2.3.8
-  resolution: "datatables.net-dt@npm:2.3.8"
-  dependencies:
-    datatables.net: "npm:2.3.8"
-    jquery: "npm:>=1.7"
-  checksum: 10c0/acd4e3d53b0404381eba82f3ba1db039d68d437c90a2554611d5569dbaf350748036a0c8e03f22ca1d1ea88035cb3d8b63ed2520d9e49df59767f3ba115e821a
-  languageName: node
-  linkType: hard
-
-"datatables.net-responsive-dt@npm:^3.0.8":
-  version: 3.0.8
-  resolution: "datatables.net-responsive-dt@npm:3.0.8"
-  dependencies:
-    datatables.net-dt: "npm:^2"
-    datatables.net-responsive: "npm:3.0.8"
-    jquery: "npm:>=1.7"
-  checksum: 10c0/bceb2d808ffce229d14c6fc4612679fcc0ecffbfbbb11d0980df00567576ff2db158487b2bdf72d965e4babbf2f55f57207b4754aee4bbcee9d76bbbea3c7a3f
-  languageName: node
-  linkType: hard
-
-"datatables.net-responsive@npm:3.0.8":
-  version: 3.0.8
-  resolution: "datatables.net-responsive@npm:3.0.8"
-  dependencies:
-    datatables.net: "npm:^2"
-    jquery: "npm:>=1.7"
-  checksum: 10c0/b863ce2b30a6fa76579d6535252d4eb8d914180c36d73ee147e3065a933eb7ad2cb4d5d952d05971bf9c3c84293592c3c9f6f8ddb989da7eb00b60c468b7aa4e
-  languageName: node
-  linkType: hard
-
-"datatables.net@npm:2.3.8, datatables.net@npm:^2, datatables.net@npm:^2.3.8":
-  version: 2.3.8
-  resolution: "datatables.net@npm:2.3.8"
-  dependencies:
-    jquery: "npm:>=1.7"
-  checksum: 10c0/3b82b4a47cbe053c8a8ad9eca41db4facb1e5c576e54b589102dacd0b7ab7b727c760534dcc5e4be7f34ec1b47424fed2cfd32a0bec82b728cca7732689eb748
   languageName: node
   linkType: hard
 
@@ -2275,15 +2237,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gridjs@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "gridjs@npm:6.2.0"
-  dependencies:
-    preact: "npm:^10.11.3"
-  checksum: 10c0/843998f16bb05026221c9061d843d8c793c8ae7bf7c0738e2ee0af3d23c82172e79cb51886880ebe872ed3c316763eea6c449e96fdf3ab81decb877dcb4be88c
-  languageName: node
-  linkType: hard
-
 "gsmarena-api@npm:^2.0.5":
   version: 2.0.5
   resolution: "gsmarena-api@npm:2.0.5"
@@ -2470,13 +2423,6 @@ __metadata:
   bin:
     jiti: lib/jiti-cli.mjs
   checksum: 10c0/79b2e96a8e623f66c1b703b98ec1b8be4500e1d217e09b09e343471bbb9c105381b83edbb979d01cef18318cc45ce6e153571b6c83122170eefa531c64b6789b
-  languageName: node
-  linkType: hard
-
-"jquery@npm:>=1.7":
-  version: 4.0.0
-  resolution: "jquery@npm:4.0.0"
-  checksum: 10c0/06d8d0f51121af5a691f8b59c74823157bb5b60eea915b30eaa920d6c0ffd91e60ba81e9b97bd8203f331f9dd8d0ec9a4b010935ea314bdd2f15453c29bc780b
   languageName: node
   linkType: hard
 
@@ -2914,13 +2860,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mithril@npm:^2.3.8":
-  version: 2.3.8
-  resolution: "mithril@npm:2.3.8"
-  checksum: 10c0/25a63c4a42656f57c83b53ff44848c322a0aa5f20639830277aabc5d55928f4f10abeb552bca0ae73b37af5ec6b2a89f6f488637676628f1b406c0e7c099d9dd
-  languageName: node
-  linkType: hard
-
 "mkdirp@npm:^3.0.1":
   version: 3.0.1
   resolution: "mkdirp@npm:3.0.1"
@@ -3224,13 +3163,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"preact@npm:^10.11.3":
-  version: 10.29.1
-  resolution: "preact@npm:10.29.1"
-  checksum: 10c0/55da3994d0d9ebcc26476552c6571f8be1150cccdafe842aad40eff9abc84c867555f6d01db386fc63ac4cbe9f9da245002468bb24df0642365162d8f1b545e2
-  languageName: node
-  linkType: hard
-
 "prettier-plugin-tailwindcss@npm:^0.7.2":
   version: 0.7.2
   resolution: "prettier-plugin-tailwindcss@npm:0.7.2"
@@ -3348,15 +3280,10 @@ __metadata:
   resolution: "rom-scraper@workspace:."
   dependencies:
     "@tailwindcss/postcss": "npm:^4.2.2"
-    "@types/mithril": "npm:^2.2.8"
+    bootstrap: "npm:^5.3.8"
     buffer: "npm:^5.5.0||^6.0.0"
-    datatables.net: "npm:^2.3.8"
-    datatables.net-dt: "npm:^2.3.8"
-    datatables.net-responsive-dt: "npm:^3.0.8"
-    gridjs: "npm:^6.2.0"
     gsmarena-api: "npm:^2.0.5"
     gsmarena-scraper: "npm:^1.0.3"
-    mithril: "npm:^2.3.8"
     parcel: "npm:2.16.4"
     prettier: "npm:^3.8.3"
     prettier-plugin-tailwindcss: "npm:^0.7.2"

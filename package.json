@@ -19,14 +19,9 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "dependencies": {
     "@tailwindcss/postcss": "^4.2.2",
-    "@types/mithril": "^2.2.8",
-    "datatables.net": "^2.3.8",
-    "datatables.net-dt": "^2.3.8",
-    "datatables.net-responsive-dt": "^3.0.8",
-    "gridjs": "^6.2.0",
+    "bootstrap": "^5.3.8",
     "gsmarena-api": "^2.0.5",
     "gsmarena-scraper": "^1.0.3",
-    "mithril": "^2.3.8",
     "tailwindcss": "^4.2.2"
   }
 }
