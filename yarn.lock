@@ -1627,6 +1627,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bootstrap-icons@npm:^1.13.1":
+  version: 1.13.1
+  resolution: "bootstrap-icons@npm:1.13.1"
+  checksum: 10c0/2c1adeb1796502e67b476ce049c86bc3a7ff7984c61777e056820389a8db5ec6535c12a33f76f3ed52674bca4c01472065a7fbcde6cc384ebb86c2eae51390bd
+  languageName: node
+  linkType: hard
+
 "bootstrap@npm:^5.3.8":
   version: 5.3.8
   resolution: "bootstrap@npm:5.3.8"
@@ -3145,6 +3152,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"popper.js@npm:^1.16.1":
+  version: 1.16.1
+  resolution: "popper.js@npm:1.16.1"
+  checksum: 10c0/1c1a826f757edb5b8c2049dfd7a9febf6ae1e9d0e51342fc715b49a0c1020fced250d26484619883651e097c5764bbcacd2f31496e3646027f079dd83e072681
+  languageName: node
+  linkType: hard
+
 "postcss-value-parser@npm:^4.2.0":
   version: 4.2.0
   resolution: "postcss-value-parser@npm:4.2.0"
@@ -3281,10 +3295,12 @@ __metadata:
   dependencies:
     "@tailwindcss/postcss": "npm:^4.2.2"
     bootstrap: "npm:^5.3.8"
+    bootstrap-icons: "npm:^1.13.1"
     buffer: "npm:^5.5.0||^6.0.0"
     gsmarena-api: "npm:^2.0.5"
     gsmarena-scraper: "npm:^1.0.3"
     parcel: "npm:2.16.4"
+    popper.js: "npm:^1.16.1"
     prettier: "npm:^3.8.3"
     prettier-plugin-tailwindcss: "npm:^0.7.2"
     tailwindcss: "npm:^4.2.2"

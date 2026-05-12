@@ -31,10 +31,58 @@
       <table id="datatable" class="table">
         <thead>
           <tr>
-            <th>name</th>
-            <th>vendor</th>
-            <th>codename</th>
-            <th>support</th>
+            <th>
+              name
+
+              <div class="input-group" id="name-search">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search name..."
+                  aria-label="Search"
+                />
+              </div>
+            </th>
+            <th>
+              vendor
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  filter
+                </button>
+                <ul class="dropdown-menu"></ul>
+              </div>
+            </th>
+            <th>
+              codename
+              <div class="input-group" id="codename-search">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search codename..."
+                  aria-label="Search"
+                />
+              </div>
+            </th>
+            <th>
+              support
+
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  filter
+                </button>
+                <ul class="dropdown-menu"></ul>
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody></tbody>
