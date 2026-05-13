@@ -56,7 +56,6 @@
                 requests
                 beautifulsoup4
                 jsonpickle
-
               ]);
             /*
               shellHook = ''

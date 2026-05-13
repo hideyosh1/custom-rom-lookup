@@ -8,4 +8,3 @@ to-do:
 - yaap?
 - superioros
 - project matrixx
-- crdroid

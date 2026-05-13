@@ -13,8 +13,7 @@ for (const [key, value] of Object.entries(phones)) {
   <th>${value.name}</th>
   <td class="vendor-td">${value.vendor}</td>
   <td class="codename-td">${key}</td>
-  <td class="support-td">${value.support}</td>
-  `;
+  <td class="support-td"><ul class="m-0"><li>${value.support.join("</li><li>")}</li></ul></td>`;
 
   vendor_set.add(value.vendor);
 
@@ -101,19 +100,20 @@ const reset = function () {
     }
   }
 
-  let enabled_support = new Set();
+  let disabled_support = new Set();
   for (const support of document.querySelectorAll(".support-check")!) {
-    if ((support as HTMLInputElement).checked === false) {
+    if ((support as HTMLInputElement).checked) {
       continue;
     }
-    enabled_support.add(
+    disabled_support.add(
       support.parentElement.querySelector("label")!.innerHTML.trim(),
     );
   }
   for (const phone of document.querySelector("tbody")!.querySelectorAll("tr")) {
-    let name = phone.querySelector(".support-td")!;
+    const codename = phone.querySelector(".codename-td")!.innerHTML.trim();
     if (
-      !enabled_support.has(phone.querySelector(".support-td")!.innerHTML.trim())
+      disabled_support.intersection(new Set(phones[codename].support)).size !==
+      0
     ) {
       visible.set(phone.id, false);
     }
