@@ -13,7 +13,7 @@ for (const [key, value] of Object.entries(phones)) {
   <th>${value.name}</th>
   <td class="vendor-td">${value.vendor}</td>
   <td class="codename-td">${key}</td>
-  <td>${value.support}</td>
+  <td class="support-td">${value.support}</td>
   `;
 
   vendor_set.add(value.vendor);
@@ -85,16 +85,40 @@ const reset = function () {
 
   let enabled_vendors = new Set();
   for (const vendor of document.querySelectorAll(".vendor-check")!) {
+    if ((vendor as HTMLInputElement).checked === false) {
+      continue;
+    }
     enabled_vendors.add(
       vendor.parentElement.querySelector("label")!.innerHTML.trim(),
     );
   }
   console.log(enabled_vendors);
   for (const phone of document.querySelector("tbody")!.querySelectorAll("tr")) {
-    console.log(phone.querySelector(".vendor-td")!.innerHTML);
+    let name = phone.querySelector(".vendor-td")!;
     if (
       !enabled_vendors.has(phone.querySelector(".vendor-td")!.innerHTML.trim())
     ) {
+      console.log(phone);
+      visible.set(phone.id, false);
+    }
+  }
+
+  let enabled_support = new Set();
+  for (const support of document.querySelectorAll(".support-check")!) {
+    if ((support as HTMLInputElement).checked === false) {
+      continue;
+    }
+    enabled_support.add(
+      support.parentElement.querySelector("label")!.innerHTML.trim(),
+    );
+  }
+  console.log(enabled_support);
+  for (const phone of document.querySelector("tbody")!.querySelectorAll("tr")) {
+    let name = phone.querySelector(".support-td")!;
+    if (
+      !enabled_support.has(phone.querySelector(".support-td")!.innerHTML.trim())
+    ) {
+      console.log(phone);
       visible.set(phone.id, false);
     }
   }
