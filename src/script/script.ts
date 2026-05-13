@@ -10,7 +10,15 @@ for (const [key, value] of Object.entries(phones)) {
   element.id = key;
 
   element.innerHTML = `
-  <th>${value.name}</th>
+  <th>${value.name} 
+
+                <button
+                  class="btn btn-primary float-right"
+                  type="button"
+                >
+                  <a class="text-white" href=${encodeURI("https://www.gsmarena.com/res.php3?sSearch=" + value.vendor + " " + value.name)}>search on gsmarena</a>
+                </button>
+  </th>
   <td class="vendor-td">${value.vendor}</td>
   <td class="codename-td">${key}</td>
   <td class="support-td"><ul class="m-0"><li>${value.support.join("</li><li>")}</li></ul></td>`;
