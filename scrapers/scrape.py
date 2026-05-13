@@ -4,6 +4,7 @@ import subprocess
 
 import bliss
 import calyx
+import crdroid
 import derpfest
 import e
 import elixir
@@ -14,10 +15,10 @@ import lineage
 
 phonedict = {}
 
-r = requests.get("https://wiki.lineageos.org/devices/")
+r = requests.get("https://wiki.lineageos.org/devices/", verify=False)
 lineage.scrape(r.text, phonedict)
 
-r = requests.get("https://iode.tech/iodeos-official-supported-devices/")
+r = requests.get("https://iode.tech/iodeos-official-supported-devices/", verify=False)
 iode.scrape(r.text, phonedict)
 #
 
@@ -30,25 +31,29 @@ r = subprocess.check_output(
 )
 infinity_x.scrape(r, phonedict)
 
-r = requests.get("https://projectelixiros.com/assets/json/download.json")
+r = requests.get("https://projectelixiros.com/assets/json/download.json", verify=False)
 elixir.scrape(r.text, phonedict)
 
-r = requests.get("https://doc.e.foundation/devices")
+r = requests.get("https://doc.e.foundation/devices", verify=False)
 e.scrape(r.text, phonedict)
 
-r = requests.get("https://derpfest.org/devices-index.json")
+r = requests.get("https://derpfest.org/devices-index.json", verify=False)
 derpfest.scrape(r.text, phonedict)
 
 r = requests.get(
-    "https://downloads.blissroms.org/api/v1/blissroms/devices?include_latest_build=true&channel=stable&sort=brand&dir=asc"
+    "https://downloads.blissroms.org/api/v1/blissroms/devices?include_latest_build=true&channel=stable&sort=brand&dir=asc",
+    verify=False,
 )
 bliss.scrape(r.text, phonedict)
 
-r = requests.get("http://calyxos.org/install/")
+r = requests.get("http://calyxos.org/install/", verify=False)
 calyx.scrape(r.text, phonedict)
 
-r = requests.get("https://grapheneos.org/releases")
+r = requests.get("https://grapheneos.org/releases", verify=False)
 graphene.scrape(r.text, phonedict)
+
+r = requests.get("https://crdroid.net/downloads", verify=False)
+crdroid.scrape(r.text, phonedict)
 
 
 print(jsonpickle.encode(phonedict))
