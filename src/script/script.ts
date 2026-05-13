@@ -92,13 +92,11 @@ const reset = function () {
       vendor.parentElement.querySelector("label")!.innerHTML.trim(),
     );
   }
-  console.log(enabled_vendors);
   for (const phone of document.querySelector("tbody")!.querySelectorAll("tr")) {
     let name = phone.querySelector(".vendor-td")!;
     if (
       !enabled_vendors.has(phone.querySelector(".vendor-td")!.innerHTML.trim())
     ) {
-      console.log(phone);
       visible.set(phone.id, false);
     }
   }
@@ -112,13 +110,11 @@ const reset = function () {
       support.parentElement.querySelector("label")!.innerHTML.trim(),
     );
   }
-  console.log(enabled_support);
   for (const phone of document.querySelector("tbody")!.querySelectorAll("tr")) {
     let name = phone.querySelector(".support-td")!;
     if (
       !enabled_support.has(phone.querySelector(".support-td")!.innerHTML.trim())
     ) {
-      console.log(phone);
       visible.set(phone.id, false);
     }
   }
